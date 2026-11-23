@@ -27,6 +27,11 @@ Learners in this pathway combine electronics, programming and data to build phys
 
 Arduino · Micro:bit · Raspberry Pi where available · Educational circuit simulators · Python or C/C++
 
+## Runnable example
+
+A working version of this demonstration is provided in [09-code-examples](../../09-code-examples/README.md): [Smart Irrigation Controller](../../09-code-examples/05-robotics-iot/smart-irrigation.ino).
+Run it, change its inputs, then extend it into a capstone project.
+
 ## Capstone examples
 
 - Smart irrigation demonstration

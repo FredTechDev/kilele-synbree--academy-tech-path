@@ -29,6 +29,11 @@ Learners in this pathway study how to protect systems, networks and information,
 
 Linux · Networking tools · Virtual machines · Browser security tools · Approved cybersecurity training laboratories
 
+## Runnable example
+
+A working version of this demonstration is provided in [09-code-examples](../../09-code-examples/README.md): [Password Strength Checker](../../09-code-examples/03-cybersecurity/password-strength-checker.py).
+Run it, change its inputs, then extend it into a capstone project.
+
 ## Capstone examples
 
 - School cybersecurity awareness system

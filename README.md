@@ -43,6 +43,10 @@ kilele-techpath/
 ├── PROGRAMMING-FRAMEWORK.md           ← programming & pathway development guide (v1.0)
 ├── CONTRIBUTING.md
 ├── LICENSE
+├── Makefile                           ← make check / examples / learner / project
+├── .gitignore
+├── .github/workflows/validate.yml     ← CI: docs + example checks
+├── .devcontainer/devcontainer.json    ← ready-to-code environment
 │
 ├── 00-programme-framework/
 │   ├── vision-and-mission.md
@@ -64,7 +68,9 @@ kilele-techpath/
 ├── 05-assessments/                    (quizzes, practical, assignments, rubrics)
 ├── 06-teacher-resources/              (lesson plans, guides, activities)
 ├── 07-learner-portfolio/              (passport and templates)
-└── 08-resources/                      (tools, glossary, references)
+├── 08-resources/                      (tools, glossary, references)
+├── 09-code-examples/                  (8 runnable pathway demonstrations)
+└── scripts/                           (Python + Bash helpers and checks)
 ```
 
 ## Quick links
@@ -88,8 +94,21 @@ kilele-techpath/
 - [Projects](04-projects/)
 - [Assessments](05-assessments/)
 - [Teacher resources](06-teacher-resources/)
+- [Teacher Guide to Python and Shell](06-teacher-resources/teaching-guides/python-and-shell-guide.md)
 - [Learner portfolio](07-learner-portfolio/)
 - [Tools, glossary and references](08-resources/)
+- [Runnable code examples](09-code-examples/README.md) — all 8 demonstrations as runnable files
+- [Repository scripts](scripts/README.md) — validation, example tests and scaffolding helpers
+
+## Quick checks
+
+```bash
+bash scripts/setup-environment.sh   # check tools and create .venv
+bash scripts/check-all.sh            # validate links, docs and all examples
+make check                           # same checks through the Makefile
+```
+
+Optional: `bash scripts/setup-environment.sh --with-ai` installs scikit-learn for the AI example.
 
 ## Guiding principles
 

@@ -30,6 +30,11 @@ Learners in this pathway design, build, test and document software applications.
 
 Python · JavaScript · HTML · CSS · SQL · Git · GitHub
 
+## Runnable example
+
+A working version of this demonstration is provided in [09-code-examples](../../09-code-examples/README.md): [Student Grade Calculator](../../09-code-examples/01-software-engineering/student-grade-calculator.py).
+Run it, change its inputs, then extend it into a capstone project.
+
 ## Capstone examples
 
 - School management application

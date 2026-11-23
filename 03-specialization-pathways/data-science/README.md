@@ -28,6 +28,11 @@ Learners in this pathway collect, clean, analyze and visualize data to answer qu
 
 Python · Pandas · Matplotlib · Jupyter · SQL · Spreadsheet applications
 
+## Runnable example
+
+A working version of this demonstration is provided in [09-code-examples](../../09-code-examples/README.md): [Student Performance Analysis](../../09-code-examples/02-data-science/student-performance-analysis.py).
+Run it, change its inputs, then extend it into a capstone project.
+
 ## Capstone examples
 
 - School attendance analysis

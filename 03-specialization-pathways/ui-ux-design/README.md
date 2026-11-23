@@ -29,6 +29,11 @@ Learners in this pathway research user needs and design accessible, usable and a
 
 Figma · Pen-and-paper wireframes · Graphic design tools · HTML and CSS awareness
 
+## Runnable example
+
+A working version of this demonstration is provided in [09-code-examples](../../09-code-examples/README.md): [Interactive Learning Dashboard](../../09-code-examples/06-ui-ux-design/learning-dashboard/index.html).
+Run it, change its inputs, then extend it into a capstone project.
+
 ## Capstone examples
 
 - School application prototype

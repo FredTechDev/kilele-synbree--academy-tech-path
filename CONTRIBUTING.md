@@ -38,7 +38,8 @@ Teachers, mentors, curriculum designers, learners, parents and technology profes
    - Assessments → `05-assessments/*/README.md`
    - Teacher resources → `06-teacher-resources/*/README.md`
 4. Keep Markdown formatting, headings and tables consistent with the existing files.
-5. Open a pull request explaining the change, the grade level affected and any resources required.
+5. Run the local checks before opening a pull request (see "Local checks" below).
+6. Open a pull request explaining the change, the grade level affected and any resources required.
 
 ## Curriculum versioning
 
@@ -50,6 +51,24 @@ Use semantic-style version numbers as described in the curriculum:
 
 Document every released change in the repository release notes.
 
+## Local checks
+
+The repository includes Python and shell helpers that check documentation and run every code example:
+
+```bash
+bash scripts/setup-environment.sh   # check tools and create .venv
+bash scripts/check-all.sh            # links + docs hygiene + example tests
+```
+
+Useful individual commands:
+
+- `bash scripts/validate-links.sh` — internal links and heading anchors
+- `bash scripts/check-docs.sh --fix` — repair trailing whitespace and final newlines
+- `bash scripts/run-examples.sh` — run all examples with sample input
+- `make check` — same as `check-all.sh` through the Makefile
+
+See [scripts/README.md](scripts/README.md) for the full list, including learner and project scaffolding.
+
 ## Review checklist
 
 - [ ] Content is accurate and age-appropriate.
@@ -58,6 +77,7 @@ Document every released change in the repository release notes.
 - [ ] Links and tool references are valid and licensing is acceptable.
 - [ ] Markdown renders correctly.
 - [ ] Related files (curriculum, grade, assessment, resource lists) are updated consistently.
+- [ ] `bash scripts/check-all.sh` passes (or any failure is explained in the PR).
 
 By contributing, you agree that your work is licensed under the [MIT License](LICENSE).
 

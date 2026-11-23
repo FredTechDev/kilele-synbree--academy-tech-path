@@ -31,6 +31,11 @@ Learners in this pathway design, configure, troubleshoot and secure networks and
 
 Linux · Cisco Packet Tracer · Virtual machines · Cloud education environments · Git and GitHub
 
+## Runnable example
+
+A working version of this demonstration is provided in [09-code-examples](../../09-code-examples/README.md): [IP Address Information Tool](../../09-code-examples/07-networking-cloud/ip-address-tool.py).
+Run it, change its inputs, then extend it into a capstone project.
+
 ## Capstone examples
 
 - School network architecture

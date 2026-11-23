@@ -1,0 +1,17 @@
+# Local Python environments and caches
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Editor and OS files
+.DS_Store
+*.swp
+.idea/
+.vscode/
+
+# Generated learner folders contain personal data — ignore by default.
+# Use `git add -f` only for anonymized sample learners.
+07-learner-portfolio/learners/*
+!07-learner-portfolio/learners/README.md

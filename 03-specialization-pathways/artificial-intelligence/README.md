@@ -30,6 +30,11 @@ Learners in this pathway explore how systems learn from data, build simple model
 
 Python · Jupyter · Educational machine learning tools · Approved AI services
 
+## Runnable example
+
+A working version of this demonstration is provided in [09-code-examples](../../09-code-examples/README.md): [Machine Learning Classification](../../09-code-examples/04-artificial-intelligence/ml-classification.py).
+Run it, change its inputs, then extend it into a capstone project.
+
 ## Capstone examples
 
 - Simple image classification demonstration

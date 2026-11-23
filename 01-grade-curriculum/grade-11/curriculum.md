@@ -97,4 +97,4 @@ The learner possesses a clear technology direction, practical experience, a docu
 
 ---
 
-**Navigation:** [← Grade 10](../grade-10/curriculum.md) · [Full curriculum](../../TECH-PATH-CURRICULUM.md) · [Learner Portfolio](../../07-learner-portfolio/technology-passport.md)
+**Navigation:** [← Grade 10](../grade-10/curriculum.md) · [Runnable examples (Grades 10–11)](../../09-code-examples/README.md) · [Full curriculum](../../TECH-PATH-CURRICULUM.md) · [Learner Portfolio](../../07-learner-portfolio/technology-passport.md)

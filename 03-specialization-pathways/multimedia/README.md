@@ -27,6 +27,11 @@ Learners in this pathway produce digital media — graphics, audio, video, anima
 
 GIMP · Inkscape · Blender · Audacity · Kdenlive · Other suitable creative tools
 
+## Runnable example
+
+A working version of this demonstration is provided in [09-code-examples](../../09-code-examples/README.md): [Interactive Animated Art](../../09-code-examples/08-multimedia/interactive-art/index.html).
+Run it, change its inputs, then extend it into a capstone project.
+
 ## Capstone examples
 
 - Educational animation

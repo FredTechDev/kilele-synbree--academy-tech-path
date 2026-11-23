@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Kilele Learning Dashboard</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f3f4f6;
+            margin: 0;
+            padding: 30px;
+        }
+
+        .dashboard {
+            max-width: 600px;
+            margin: auto;
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+        }
+
+        h1 {
+            color: #166534;
+        }
+
+        .progress {
+            background: #e5e7eb;
+            height: 15px;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .progress-bar {
+            background: #16a34a;
+            height: 100%;
+            width: 65%;
+        }
+
+        button {
+            background: #166534;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #14532d;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="dashboard">
+
+        <h1>My Learning Dashboard</h1>
+
+        <p>Welcome to Kilele TechPath.</p>
+
+        <h3>Programming Progress</h3>
+
+        <div class="progress">
+            <div class="progress-bar"></div>
+        </div>
+
+        <p>65% completed</p>
+
+        <button onclick="showMessage()">
+            Continue Learning
+        </button>
+
+    </div>
+
+    <script>
+        function showMessage() {
+            alert("Welcome back! Continue building your skills.");
+        }
+    </script>
+
+</body>
+
+</html>
