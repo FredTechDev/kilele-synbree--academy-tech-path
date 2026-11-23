@@ -40,6 +40,7 @@ It introduces learners to the wider technology ecosystem — not just programmin
 kilele-techpath/
 ├── README.md                          ← you are here
 ├── TECH-PATH-CURRICULUM.md            ← full curriculum document
+├── PROGRAMMING-FRAMEWORK.md           ← programming & pathway development guide (v1.0)
 ├── CONTRIBUTING.md
 ├── LICENSE
 │
@@ -67,6 +68,10 @@ kilele-techpath/
 ```
 
 ## Quick links
+
+**Core documents**
+- [Full Curriculum](TECH-PATH-CURRICULUM.md)
+- [Programming & Pathway Development Framework](PROGRAMMING-FRAMEWORK.md) — the Kilele Build Cycle, grade progression, eight pathway demonstrations with code, and implementation phases
 
 **Framework**
 - [Vision and Mission](00-programme-framework/vision-and-mission.md)
