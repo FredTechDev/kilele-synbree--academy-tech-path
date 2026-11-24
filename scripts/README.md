@@ -20,6 +20,9 @@ bash scripts/check-all.sh             # links + docs + example tests
 | `check-docs.sh` | Check Markdown hygiene. Add `--fix` to repair whitespace and final newlines. |
 | `run-examples.sh` | Run and verify every example in `09-code-examples/`. Uses `.venv` if present. |
 | `check-all.sh` | Run all checks — also used by CI and `make check`. |
+| `run-challenges.sh` | Run coding challenge tests. Pass a filter such as `grade-9`. |
+| `progress.sh` | Print a progress report from a Technology Passport. |
+| `pathway-explorer.sh` | Interactive pathway discovery. Use `--demo` for a sample run. |
 | `new-learner.sh` | Create a learner portfolio from the standard templates. |
 | `new-project.sh` | Scaffold a project folder from the project template. |
 
@@ -35,6 +38,13 @@ bash scripts/new-project.sh "Grade Calculator" grade-8 amina-otieno
 # Repair documentation whitespace
 bash scripts/check-docs.sh --fix
 
+# Test your challenge solutions
+bash scripts/run-challenges.sh grade-9
+
+# See a progress report and explore pathways
+bash scripts/progress.sh
+bash scripts/pathway-explorer.sh --demo
+
 # Run everything
 bash scripts/check-all.sh
 ```
@@ -47,6 +57,9 @@ From the repository root:
 make check
 make links
 make examples
+make challenges
+make progress
+make explore
 make setup
 make learner NAME="Amina Otieno" GRADE=grade-8
 make project TITLE="Grade Calculator" GRADE=grade-8 LEARNER=amina-otieno
@@ -59,6 +72,9 @@ The shell scripts are thin wrappers around Python tools in `scripts/tools/`:
 - `validate_links.py` — parses Markdown links and heading anchors.
 - `check_docs.py` — documentation hygiene checks, with `--fix`.
 - `test_examples.py` — runs each example with sample input and checks its output.
+- `check_challenges.py` — runs challenge tests; unattempted challenges are reported as SKIP.
+- `progress_report.py` — reads a passport and suggests competencies to practise next.
+- `pathway_explorer.py` — scores eight interest questions and suggests pathways to explore.
 
 Optional dependencies are reported as `SKIP`, not failure, so the checks work on machines without scikit-learn.
 

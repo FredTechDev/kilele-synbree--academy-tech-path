@@ -115,4 +115,4 @@ The learner becomes confident using digital devices and understands fundamental 
 
 ---
 
-**Navigation:** [Grade 7 →](../grade-7/curriculum.md) · [Grade progression](../../00-programme-framework/learning-philosophy.md) · [Full curriculum](../../TECH-PATH-CURRICULUM.md)
+**Navigation:** [Grade 7 →](../grade-7/curriculum.md) · [Grade progression](../../00-programme-framework/learning-philosophy.md) · [Printable activities](../../11-printable-activities/README.md) · [Full curriculum](../../TECH-PATH-CURRICULUM.md)

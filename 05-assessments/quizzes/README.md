@@ -29,6 +29,19 @@ Short quizzes check conceptual understanding without replacing practical assessm
 | 10 | OOP and functions; SQL joins; security principles (CIA); data ethics; cloud terms; SDLC |
 | 11 | Pathway-specific concepts; testing and deployment; data validation; professional collaboration |
 
+## Ready-to-use question banks
+
+| Grade | Quiz |
+|---|---|
+| 6 | [Discover Technology](grade-6.md) |
+| 7 | [Develop Digital Competence](grade-7.md) |
+| 8 | [Understand and Create](grade-8.md) |
+| 9 | [Explore the Technology Ecosystem](grade-9.md) |
+| 10 | [Discover Technology Pathways](grade-10.md) |
+| 11 | [Build and Specialize](grade-11.md) |
+
+Each file contains questions and an answer key with short explanations. Adapt the questions to local examples and your school assessment requirements.
+
 ## Question bank structure
 
 Each quiz file should include:

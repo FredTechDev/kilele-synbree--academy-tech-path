@@ -70,6 +70,8 @@ kilele-techpath/
 ├── 07-learner-portfolio/              (passport and templates)
 ├── 08-resources/                      (tools, glossary, references)
 ├── 09-code-examples/                  (8 runnable pathway demonstrations)
+├── 10-challenges/                     (progressive practice with self-tests)
+├── 11-printable-activities/           (unplugged and paper worksheets)
 └── scripts/                           (Python + Bash helpers and checks)
 ```
 
@@ -98,14 +100,24 @@ kilele-techpath/
 - [Learner portfolio](07-learner-portfolio/)
 - [Tools, glossary and references](08-resources/)
 - [Runnable code examples](09-code-examples/README.md) — all 8 demonstrations as runnable files
+- [Progressive coding challenges](10-challenges/README.md) — guided, independent and creative practice with instant feedback
+- [Printable activities](11-printable-activities/README.md) — unplugged lessons for low-resource classrooms
 - [Repository scripts](scripts/README.md) — validation, example tests and scaffolding helpers
 
 ## Quick checks
 
 ```bash
 bash scripts/setup-environment.sh   # check tools and create .venv
-bash scripts/check-all.sh            # validate links, docs and all examples
+bash scripts/check-all.sh            # validate links, docs, examples and challenges
 make check                           # same checks through the Makefile
+```
+
+Learner-facing tools:
+
+```bash
+bash scripts/run-challenges.sh       # test your challenge solutions
+bash scripts/progress.sh             # progress report from your technology passport
+bash scripts/pathway-explorer.sh     # discover preferred pathways (use --demo to preview)
 ```
 
 Optional: `bash scripts/setup-environment.sh --with-ai` installs scikit-learn for the AI example.

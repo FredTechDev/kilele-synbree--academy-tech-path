@@ -1,6 +1,6 @@
 # Kilele TechPath — convenient shortcuts for repository checks and scaffolding.
 
-.PHONY: check links docs fix examples setup setup-ai learner project
+.PHONY: check links docs fix examples challenges progress explore setup setup-ai learner project
 
 GRADE ?= grade-11
 LEARNER ?= class
@@ -20,6 +20,15 @@ fix:
 
 examples:
 	bash scripts/run-examples.sh
+
+challenges:
+	bash scripts/run-challenges.sh
+
+progress:
+	bash scripts/progress.sh
+
+explore:
+	bash scripts/pathway-explorer.sh
 
 setup:
 	bash scripts/setup-environment.sh

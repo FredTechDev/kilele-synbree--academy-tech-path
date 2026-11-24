@@ -82,6 +82,16 @@ The output uses three states:
 - **SKIP** — an optional dependency is missing; install it with its `requirements.txt`.
 - **FAIL** — something is wrong; read the message and investigate.
 
+## 4b. Practice, progress and discovery tools
+
+Three additional tools support self-paced learning:
+
+- **Challenges** — [10-challenges](../../10-challenges/README.md) provides starter files and tests for Grades 8–11. Learners copy `starter.py` to `solution.py` and run `bash scripts/run-challenges.sh`. Tests give PASS / SKIP / FAIL feedback with the failing case name.
+- **Progress report** — `bash scripts/progress.sh` reads a learner's Technology Passport and lists recorded competency levels, project count and suggested next modules. Use it in learner conferences.
+- **Pathway explorer** — `bash scripts/pathway-explorer.sh` asks eight interest questions and suggests two pathways to explore. It guides exploration; it never assigns a learner to a career. Use `--demo` to preview it with a projector.
+
+Also available: [ready-to-use quizzes](../../05-assessments/quizzes/README.md) for Grades 6–11 and [printable unplugged activities](../../11-printable-activities/README.md) for days without devices or internet.
+
 ## 5. Essential commands for teachers
 
 | Task | Command |

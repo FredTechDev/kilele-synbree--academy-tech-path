@@ -102,4 +102,4 @@ The learner can create simple digital solutions and understands the basic princi
 
 ---
 
-**Navigation:** [← Grade 7](../grade-7/curriculum.md) · [Grade 9 →](../grade-9/curriculum.md) · [Runnable examples (Grades 8–9)](../../09-code-examples/README.md) · [Full curriculum](../../TECH-PATH-CURRICULUM.md)
+**Navigation:** [← Grade 7](../grade-7/curriculum.md) · [Grade 9 →](../grade-9/curriculum.md) · [Runnable examples (Grades 8–9)](../../09-code-examples/README.md) · [Coding challenges](../../10-challenges/README.md) · [Full curriculum](../../TECH-PATH-CURRICULUM.md)

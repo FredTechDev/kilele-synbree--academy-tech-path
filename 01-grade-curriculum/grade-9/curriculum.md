@@ -105,4 +105,4 @@ The learner understands the major technology disciplines and has practical exper
 
 ---
 
-**Navigation:** [← Grade 8](../grade-8/curriculum.md) · [Grade 10 →](../grade-10/curriculum.md) · [Runnable examples (Grades 8–9)](../../09-code-examples/README.md) · [Full curriculum](../../TECH-PATH-CURRICULUM.md)
+**Navigation:** [← Grade 8](../grade-8/curriculum.md) · [Grade 10 →](../grade-10/curriculum.md) · [Runnable examples (Grades 8–9)](../../09-code-examples/README.md) · [Coding challenges](../../10-challenges/README.md) · [Full curriculum](../../TECH-PATH-CURRICULUM.md)

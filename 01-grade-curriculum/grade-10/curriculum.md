@@ -131,4 +131,4 @@ The learner has meaningful experience across technology disciplines and can iden
 
 ---
 
-**Navigation:** [← Grade 9](../grade-9/curriculum.md) · [Grade 11 →](../grade-11/curriculum.md) · [Runnable examples (Grades 10–11)](../../09-code-examples/README.md) · [Full curriculum](../../TECH-PATH-CURRICULUM.md)
+**Navigation:** [← Grade 9](../grade-9/curriculum.md) · [Grade 11 →](../grade-11/curriculum.md) · [Runnable examples (Grades 10–11)](../../09-code-examples/README.md) · [Coding challenges](../../10-challenges/README.md) · [Full curriculum](../../TECH-PATH-CURRICULUM.md)

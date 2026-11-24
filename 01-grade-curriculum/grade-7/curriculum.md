@@ -101,4 +101,4 @@ The learner can use technology productively, organize information, communicate d
 
 ---
 
-**Navigation:** [← Grade 6](../grade-6/curriculum.md) · [Grade 8 →](../grade-8/curriculum.md) · [Full curriculum](../../TECH-PATH-CURRICULUM.md)
+**Navigation:** [← Grade 6](../grade-6/curriculum.md) · [Grade 8 →](../grade-8/curriculum.md) · [Printable activities](../../11-printable-activities/README.md) · [Full curriculum](../../TECH-PATH-CURRICULUM.md)

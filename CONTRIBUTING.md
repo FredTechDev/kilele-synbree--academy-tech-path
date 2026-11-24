@@ -65,6 +65,7 @@ Useful individual commands:
 - `bash scripts/validate-links.sh` — internal links and heading anchors
 - `bash scripts/check-docs.sh --fix` — repair trailing whitespace and final newlines
 - `bash scripts/run-examples.sh` — run all examples with sample input
+- `bash scripts/run-challenges.sh` — check challenge solutions (SKIP is expected when none are attempted)
 - `make check` — same as `check-all.sh` through the Makefile
 
 See [scripts/README.md](scripts/README.md) for the full list, including learner and project scaffolding.
