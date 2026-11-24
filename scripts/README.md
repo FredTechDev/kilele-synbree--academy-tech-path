@@ -23,6 +23,10 @@ bash scripts/check-all.sh             # links + docs + example tests
 | `run-challenges.sh` | Run coding challenge tests. Pass a filter such as `grade-9`. |
 | `progress.sh` | Print a progress report from a Technology Passport. |
 | `pathway-explorer.sh` | Interactive pathway discovery. Use `--demo` for a sample run. |
+| `setup-platform.sh` | Install Flask into `.venv` for the platform prototype. |
+| `run-platform.sh` | Start the platform at `http://127.0.0.1:5000`. |
+| `test-platform.sh` | Smoke-test the platform with Flask's test client. |
+| `localization.sh` | Validate termbase and translated locale summaries. |
 | `new-learner.sh` | Create a learner portfolio from the standard templates. |
 | `new-project.sh` | Scaffold a project folder from the project template. |
 
@@ -60,7 +64,10 @@ make examples
 make challenges
 make progress
 make explore
+make localization
+make platform-test
 make setup
+make platform
 make learner NAME="Amina Otieno" GRADE=grade-8
 make project TITLE="Grade Calculator" GRADE=grade-8 LEARNER=amina-otieno
 ```
@@ -75,6 +82,8 @@ The shell scripts are thin wrappers around Python tools in `scripts/tools/`:
 - `check_challenges.py` — runs challenge tests; unattempted challenges are reported as SKIP.
 - `progress_report.py` — reads a passport and suggests competencies to practise next.
 - `pathway_explorer.py` — scores eight interest questions and suggests pathways to explore.
+- `test_platform.py` — exercises the Flask prototype with a temporary database.
+- `check_localization.py` — validates termbase consistency and locale files.
 
 Optional dependencies are reported as `SKIP`, not failure, so the checks work on machines without scikit-learn.
 

@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% block title %}Teacher Dashboard — Kilele TechPath{% endblock %}
+{% block content %}
+<h1>Teacher Dashboard</h1>
+<p class="lead">Review progress and submissions at a glance.</p>
+
+<section class="stats">
+    <div class="stat"><strong>{{ stats.submissions }}</strong><span>Submissions</span></div>
+    <div class="stat"><strong>{{ stats.approved }}</strong><span>Approved</span></div>
+    <div class="stat"><strong>{{ stats.learners }}</strong><span>Learners</span></div>
+    <div class="stat"><strong>{{ stats.competencies }}</strong><span>Competency records</span></div>
+    <div class="stat"><strong>{{ '%.2f' % stats.average_level if stats.average_level else '—' }}</strong><span>Average level</span></div>
+</section>
+
+<section class="panel">
+    <h2>Recent submissions</h2>
+    {% if not recent %}<p class="empty">Nothing submitted yet.</p>{% else %}
+    <table>
+        <thead><tr><th>Project</th><th>Learner</th><th>Grade</th><th>Pathway</th><th>Date</th></tr></thead>
+        <tbody>
+        {% for row in recent %}
+            <tr><td>{{ row.title }}</td><td>{{ row.learner }}</td><td>{{ row.grade }}</td>
+                <td>{{ row.pathway or '—' }}</td><td class="small">{{ row.created_at }}</td></tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    <p><a href="{{ url_for('submissions') }}">Review and approve submissions</a></p>
+    {% endif %}
+</section>
+
+<section class="panel">
+    <h2>Learner averages</h2>
+    {% if not levels %}<p class="empty">No competency records yet.</p>{% else %}
+    <table>
+        <thead><tr><th>Learner</th><th>Grade</th><th>Average level</th></tr></thead>
+        <tbody>
+        {% for row in levels %}
+            <tr><td>{{ row.learner }}</td><td>{{ row.grade }}</td><td>{{ row.average }} / 5</td></tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    {% endif %}
+</section>
+{% endblock %}

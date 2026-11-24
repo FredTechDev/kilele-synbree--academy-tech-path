@@ -16,5 +16,8 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Validate documentation and run examples
+      - name: Install platform dependencies
+        run: python3 -m pip install -r 12-platform/requirements.txt
+
+      - name: Validate documentation, examples and platform
         run: bash scripts/check-all.sh

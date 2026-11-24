@@ -90,7 +90,7 @@ Three additional tools support self-paced learning:
 - **Progress report** — `bash scripts/progress.sh` reads a learner's Technology Passport and lists recorded competency levels, project count and suggested next modules. Use it in learner conferences.
 - **Pathway explorer** — `bash scripts/pathway-explorer.sh` asks eight interest questions and suggests two pathways to explore. It guides exploration; it never assigns a learner to a career. Use `--demo` to preview it with a projector.
 
-Also available: [ready-to-use quizzes](../../05-assessments/quizzes/README.md) for Grades 6–11 and [printable unplugged activities](../../11-printable-activities/README.md) for days without devices or internet.
+Also available: [ready-to-use quizzes](../../05-assessments/quizzes/README.md) for Grades 6–11, [printable unplugged activities](../../11-printable-activities/README.md) for days without devices or internet, and a [platform prototype](../../12-platform/README.md) with a playground, submissions, passport, dashboard and showcase. Start it with `bash scripts/setup-platform.sh` then `bash scripts/run-platform.sh`.
 
 ## 5. Essential commands for teachers
 

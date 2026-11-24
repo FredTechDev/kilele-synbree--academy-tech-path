@@ -5,6 +5,10 @@ __pycache__/
 *.py[cod]
 .pytest_cache/
 
+# Platform prototype database (contains locally submitted data)
+12-platform/data/*.db
+12-platform/data/*.db-journal
+
 # Editor and OS files
 .DS_Store
 *.swp

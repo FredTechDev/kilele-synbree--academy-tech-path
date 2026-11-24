@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% block title %}Specialization Discovery — Kilele TechPath{% endblock %}
+{% block content %}
+<h1>Specialization Discovery</h1>
+<p class="lead">Rate each activity from 1 (not for me) to 5 (very interesting).
+   Results guide exploration — they do not assign you to a career.</p>
+
+{% if done %}
+<section class="panel">
+    <h2>Suggested pathways for {{ learner }}</h2>
+    <p><strong>Primary:</strong> {{ first }}</p>
+    <p><strong>Complementary:</strong> {{ second }}</p>
+    <p class="small">Combinations stay flexible. Try both before deciding.</p>
+    <h3>Your ratings</h3>
+    <table>
+        <thead><tr><th>Activity</th><th>Pathway</th><th>Score</th></tr></thead>
+        <tbody>
+        {% for pathway in pathways %}
+            <tr><td>{{ pathway.activity }}</td><td>{{ pathway.name }}</td>
+                <td>{{ scores[pathway.name] }} / 5</td></tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    <p><a href="{{ url_for('passport') }}">Record this in your passport</a> ·
+       <a href="{{ url_for('playground') }}">Try an example project</a></p>
+</section>
+{% else %}
+<form method="post" class="panel">
+    <label for="learner">Your name</label>
+    <input id="learner" name="learner" maxlength="120" placeholder="Anonymous">
+
+    {% for pathway in pathways %}
+    <fieldset>
+        <legend>{{ loop.index }}. {{ pathway.activity }}</legend>
+        <label class="inline"><input type="radio" name="q{{ loop.index0 }}" value="1" required> 1</label>
+        <label class="inline"><input type="radio" name="q{{ loop.index0 }}" value="2"> 2</label>
+        <label class="inline"><input type="radio" name="q{{ loop.index0 }}" value="3" checked> 3</label>
+        <label class="inline"><input type="radio" name="q{{ loop.index0 }}" value="4"> 4</label>
+        <label class="inline"><input type="radio" name="q{{ loop.index0 }}" value="5"> 5</label>
+    </fieldset>
+    {% endfor %}
+    <button type="submit">Show my pathways</button>
+</form>
+{% endif %}
+{% endblock %}

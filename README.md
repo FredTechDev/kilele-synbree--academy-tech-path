@@ -72,6 +72,8 @@ kilele-techpath/
 ├── 09-code-examples/                  (8 runnable pathway demonstrations)
 ├── 10-challenges/                     (progressive practice with self-tests)
 ├── 11-printable-activities/           (unplugged and paper worksheets)
+├── 12-platform/                       (Flask prototype: playground, passport, dashboard)
+├── 13-localization/                   (termbase and translated summaries)
 └── scripts/                           (Python + Bash helpers and checks)
 ```
 
@@ -102,6 +104,8 @@ kilele-techpath/
 - [Runnable code examples](09-code-examples/README.md) — all 8 demonstrations as runnable files
 - [Progressive coding challenges](10-challenges/README.md) — guided, independent and creative practice with instant feedback
 - [Printable activities](11-printable-activities/README.md) — unplugged lessons for low-resource classrooms
+- [Platform prototype](12-platform/README.md) — playground, submissions, passport, dashboard, discovery and showcase
+- [Localization framework](13-localization/README.md) — termbase plus Kiswahili and French summaries
 - [Repository scripts](scripts/README.md) — validation, example tests and scaffolding helpers
 
 ## Quick checks
@@ -118,6 +122,14 @@ Learner-facing tools:
 bash scripts/run-challenges.sh       # test your challenge solutions
 bash scripts/progress.sh             # progress report from your technology passport
 bash scripts/pathway-explorer.sh     # discover preferred pathways (use --demo to preview)
+```
+
+Platform prototype (Flask):
+
+```bash
+bash scripts/setup-platform.sh       # install Flask into .venv
+bash scripts/run-platform.sh         # open http://127.0.0.1:5000
+bash scripts/test-platform.sh        # smoke tests
 ```
 
 Optional: `bash scripts/setup-environment.sh --with-ai` installs scikit-learn for the AI example.

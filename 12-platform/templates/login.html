@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block title %}Teacher Access — Kilele TechPath{% endblock %}
+{% block content %}
+<h1>Teacher Access</h1>
+{% if not pin_enabled %}
+<p class="notice">No teacher PIN is configured on this server, so access is open.
+   Set <code>KILELE_TEACHER_PIN</code> before using this on a shared network.</p>
+{% endif %}
+<form method="post" class="panel narrow">
+    <label for="pin">Teacher PIN</label>
+    <input id="pin" name="pin" type="password" autocomplete="current-password">
+    <button type="submit">Continue</button>
+</form>
+{% endblock %}

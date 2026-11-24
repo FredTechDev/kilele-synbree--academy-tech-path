@@ -37,6 +37,10 @@ Teachers, mentors, curriculum designers, learners, parents and technology profes
    - Projects → `04-projects/*/README.md`
    - Assessments → `05-assessments/*/README.md`
    - Teacher resources → `06-teacher-resources/*/README.md`
+   - Runnable examples → `09-code-examples/`
+   - Platform prototype → `12-platform/`
+   - Translations → `13-localization/`
+   - Repository tooling → `scripts/`
 4. Keep Markdown formatting, headings and tables consistent with the existing files.
 5. Run the local checks before opening a pull request (see "Local checks" below).
 6. Open a pull request explaining the change, the grade level affected and any resources required.
@@ -66,6 +70,8 @@ Useful individual commands:
 - `bash scripts/check-docs.sh --fix` — repair trailing whitespace and final newlines
 - `bash scripts/run-examples.sh` — run all examples with sample input
 - `bash scripts/run-challenges.sh` — check challenge solutions (SKIP is expected when none are attempted)
+- `bash scripts/localization.sh` — validate the termbase and translated summaries
+- `bash scripts/test-platform.sh` — smoke-test the platform prototype (SKIP if Flask is absent)
 - `make check` — same as `check-all.sh` through the Makefile
 
 See [scripts/README.md](scripts/README.md) for the full list, including learner and project scaffolding.

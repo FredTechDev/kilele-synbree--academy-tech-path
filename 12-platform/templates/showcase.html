@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block title %}Project Showcase — Kilele TechPath{% endblock %}
+{% block content %}
+<h1>Project Showcase</h1>
+<p class="lead">A moderated gallery of approved work. Peer learning starts with sharing.</p>
+
+{% if not rows %}
+<p class="empty">No approved projects yet. Teachers can approve submissions from the
+   <a href="{{ url_for('submissions') }}">submissions list</a>.</p>
+{% else %}
+<section class="grid">
+{% for row in rows %}
+    <article class="card static">
+        <h2>{{ row.title }}</h2>
+        <p class="small">{{ row.learner }} · {{ row.grade }} · {{ row.pathway or 'Pathway not chosen' }}</p>
+        <p>{{ row.description or 'No description provided.' }}</p>
+        {% if row.code %}<details><summary>View code</summary><pre class="output">{{ row.code }}</pre></details>{% endif %}
+    </article>
+{% endfor %}
+</section>
+{% endif %}
+{% endblock %}

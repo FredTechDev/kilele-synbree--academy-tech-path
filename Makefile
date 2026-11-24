@@ -1,6 +1,6 @@
 # Kilele TechPath — convenient shortcuts for repository checks and scaffolding.
 
-.PHONY: check links docs fix examples challenges progress explore setup setup-ai learner project
+.PHONY: check links docs fix examples challenges progress explore localization platform platform-test platform-run setup setup-ai learner project
 
 GRADE ?= grade-11
 LEARNER ?= class
@@ -30,11 +30,23 @@ progress:
 explore:
 	bash scripts/pathway-explorer.sh
 
+localization:
+	bash scripts/localization.sh
+
+platform-test:
+	bash scripts/test-platform.sh
+
+platform-run:
+	bash scripts/run-platform.sh
+
 setup:
 	bash scripts/setup-environment.sh
 
 setup-ai:
 	bash scripts/setup-environment.sh --with-ai
+
+platform:
+	bash scripts/setup-platform.sh
 
 # Usage: make learner NAME="Amina Otieno" GRADE=grade-8 TEACHER="Mr Kamau"
 learner:

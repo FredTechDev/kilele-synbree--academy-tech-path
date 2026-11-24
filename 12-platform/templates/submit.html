@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% block title %}Submit a Project — Kilele TechPath{% endblock %}
+{% block content %}
+<h1>Submit a Project</h1>
+<p class="lead">Save your work and its documentation. Use sample or anonymized data only.</p>
+
+<form method="post" class="panel">
+    <div class="row">
+        <div>
+            <label for="learner">Learner name</label>
+            <input id="learner" name="learner" required maxlength="120">
+        </div>
+        <div>
+            <label for="grade">Grade</label>
+            <select id="grade" name="grade">
+                <option>Grade 6</option><option>Grade 7</option>
+                <option>Grade 8</option><option>Grade 9</option>
+                <option>Grade 10</option><option>Grade 11</option>
+            </select>
+        </div>
+    </div>
+
+    <label for="title">Project title</label>
+    <input id="title" name="title" required maxlength="160">
+
+    <label for="pathway">Pathway</label>
+    <select id="pathway" name="pathway">
+        <option value="">Not decided yet</option>
+        {% for pathway in pathways %}<option value="{{ pathway.name }}">{{ pathway.name }}</option>{% endfor %}
+    </select>
+
+    <label for="description">What problem does it solve?</label>
+    <textarea id="description" name="description" rows="4"></textarea>
+
+    <label for="code">Source code or design notes</label>
+    <textarea id="code" name="code" rows="10" spellcheck="false"></textarea>
+
+    <button type="submit">Submit project</button>
+</form>
+{% endblock %}

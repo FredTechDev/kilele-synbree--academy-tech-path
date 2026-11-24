@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+{% block title %}Technology Passport — Kilele TechPath{% endblock %}
+{% block content %}
+<h1>Technology Passport</h1>
+<p class="lead">Record competency progress: 1 Emerging, 2 Developing, 3 Competent,
+   4 Proficient, 5 Advanced.</p>
+
+<form method="post" class="panel">
+    <div class="row">
+        <div>
+            <label for="learner">Learner name</label>
+            <input id="learner" name="learner" value="{{ learner }}" required maxlength="120">
+        </div>
+        <div>
+            <label for="grade">Grade</label>
+            <select id="grade" name="grade">
+                <option>Grade 6</option><option>Grade 7</option>
+                <option>Grade 8</option><option>Grade 9</option>
+                <option>Grade 10</option><option>Grade 11</option>
+            </select>
+        </div>
+    </div>
+    <div class="row">
+        <div>
+            <label for="competency">Competency</label>
+            <select id="competency" name="competency">
+                {% for competency in competencies %}<option value="{{ competency }}">{{ competency }}</option>{% endfor %}
+            </select>
+        </div>
+        <div>
+            <label for="level">Level</label>
+            <select id="level" name="level">
+                <option value="1">1 — Emerging</option>
+                <option value="2">2 — Developing</option>
+                <option value="3" selected>3 — Competent</option>
+                <option value="4">4 — Proficient</option>
+                <option value="5">5 — Advanced</option>
+            </select>
+        </div>
+    </div>
+    <button type="submit">Save record</button>
+</form>
+
+{% if learner %}
+<section class="panel">
+    <h2>Records for {{ learner }}</h2>
+    {% if not records %}<p class="empty">No records yet.</p>{% else %}
+    <table>
+        <thead><tr><th>Competency</th><th>Grade</th><th>Level</th><th>Updated</th></tr></thead>
+        <tbody>
+        {% for record in records %}
+            <tr><td>{{ record.competency }}</td><td>{{ record.grade }}</td>
+                <td><span class="badge ok">{{ record.level }} / 5</span></td>
+                <td class="small">{{ record.updated_at }}</td></tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    {% endif %}
+</section>
+{% endif %}
+{% endblock %}

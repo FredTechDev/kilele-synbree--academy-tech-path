@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% block title %}Kilele TechPath — Platform Prototype{% endblock %}
+{% block content %}
+<section class="hero">
+    <h1>Kilele TechPath</h1>
+    <p class="tagline">Discover. Explore. Build. Specialize.</p>
+    <p>A local prototype of the platform capabilities described in Section 14 of the
+       Programming Framework. Use it to practise, document and discover technology pathways.</p>
+</section>
+
+<section class="grid">
+    <a class="card" href="{{ url_for('playground') }}">
+        <h2>Interactive Playground</h2>
+        <p>Write and run Python, or preview HTML in a sandboxed frame.</p>
+    </a>
+    <a class="card" href="{{ url_for('submit') }}">
+        <h2>Project Submission</h2>
+        <p>Save a project with its code, description and chosen pathway.</p>
+    </a>
+    <a class="card" href="{{ url_for('passport') }}">
+        <h2>Technology Passport</h2>
+        <p>Record competency levels from 1 Emerging to 5 Advanced.</p>
+    </a>
+    <a class="card" href="{{ url_for('discover') }}">
+        <h2>Specialization Discovery</h2>
+        <p>Answer eight interest questions and find pathways to explore.</p>
+    </a>
+    <a class="card" href="{{ url_for('showcase') }}">
+        <h2>Project Showcase</h2>
+        <p>See work that a teacher has approved for the gallery.</p>
+    </a>
+    <a class="card" href="{{ url_for('dashboard') }}">
+        <h2>Teacher Dashboard</h2>
+        <p>Review submissions, learners and average competency levels.</p>
+    </a>
+</section>
+
+<section class="notice">
+    <h2>Before you use this</h2>
+    <ul>
+        <li>Use sample data only — never real learner passwords or personal details.</li>
+        <li>The Python runner is restricted but is <strong>not</strong> a production sandbox.</li>
+        <li>{% if pin_enabled %}Teacher pages require a PIN.{% else %}No teacher PIN is configured; set <code>KILELE_TEACHER_PIN</code> before sharing this on a network.{% endif %}</li>
+    </ul>
+</section>
+{% endblock %}

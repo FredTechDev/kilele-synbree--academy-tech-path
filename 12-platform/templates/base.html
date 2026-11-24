@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Kilele TechPath{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <a class="brand" href="{{ url_for('index') }}">KILELE <span>TECHPATH</span></a>
+        <nav aria-label="Main navigation">
+            <a href="{{ url_for('playground') }}">Playground</a>
+            <a href="{{ url_for('submit') }}">Submit</a>
+            <a href="{{ url_for('submissions') }}">Submissions</a>
+            <a href="{{ url_for('passport') }}">Passport</a>
+            <a href="{{ url_for('discover') }}">Discover</a>
+            <a href="{{ url_for('showcase') }}">Showcase</a>
+            <a href="{{ url_for('dashboard') }}">Dashboard</a>
+        </nav>
+    </header>
+
+    <main>
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                <div class="flashes" role="status">
+                    {% for message in messages %}<p>{{ message }}</p>{% endfor %}
+                </div>
+            {% endif %}
+        {% endwith %}
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer>
+        <p>Discover. Explore. Build. Specialize. &nbsp;·&nbsp; Ideas. Software. Next.</p>
+        <p class="small">Local teaching prototype — not a production service.</p>
+    </footer>
+</body>
+</html>

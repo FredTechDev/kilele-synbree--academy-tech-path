@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% block title %}Submissions — Kilele TechPath{% endblock %}
+{% block content %}
+<h1>Project Submissions</h1>
+<p class="lead">All submitted projects. Approval happens in the teacher dashboard or here.</p>
+
+{% if not rows %}
+<p class="empty">No projects submitted yet. <a href="{{ url_for('submit') }}">Submit the first one.</a></p>
+{% else %}
+<table>
+    <thead>
+        <tr><th>Project</th><th>Learner</th><th>Grade</th><th>Pathway</th><th>Status</th><th>Code</th></tr>
+    </thead>
+    <tbody>
+    {% for row in rows %}
+        <tr>
+            <td><strong>{{ row.title }}</strong><br><span class="small">{{ row.created_at }}</span></td>
+            <td>{{ row.learner }}</td>
+            <td>{{ row.grade }}</td>
+            <td>{{ row.pathway or '—' }}</td>
+            <td>
+                {% if row.approved %}<span class="badge ok">Approved</span>
+                {% else %}<span class="badge">Pending</span>{% endif %}
+            </td>
+            <td>
+                {% if row.code %}<details><summary>View</summary><pre class="output">{{ row.code }}</pre></details>
+                {% else %}—{% endif %}
+            </td>
+        </tr>
+        {% if can_approve and not row.approved %}
+        <tr><td colspan="6">
+            <form method="post" action="{{ url_for('approve', project_id=row.id) }}">
+                <button type="submit" class="secondary">Approve for showcase</button>
+            </form>
+        </td></tr>
+        {% endif %}
+    {% endfor %}
+    </tbody>
+</table>
+{% endif %}
+{% endblock %}
